@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { MessageBarComponent } from "../message-bar/message-bar.component";
-import { MessageBarService } from '../message-bar.service';
+import { MessageBarService } from '../../common/services/message-bar.service';
 import { filter, Subject, takeUntil } from 'rxjs';
 import { Message } from '../dtos/message.dto';
 

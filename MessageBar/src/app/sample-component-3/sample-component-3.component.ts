@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
-import { MessageBarService } from '../message-bar/message-bar.service';
+import { MessageBarService } from '../common/services/message-bar.service';
 import { ButtonType } from '../message-bar/dtos/button-set.dto';
 
 @Component({

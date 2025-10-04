@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MessageBarService } from '../message-bar/message-bar.service';
+import { MessageBarService } from '../common/services/message-bar.service';
 
 @Component({
   selector: 'app-sample-component-2',

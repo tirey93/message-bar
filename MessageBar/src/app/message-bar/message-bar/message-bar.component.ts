@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Message } from '../dtos/message.dto';
-import { MessageBarService } from '../message-bar.service';
+import { MessageBarService } from '../../common/services/message-bar.service';
 import { NgTemplateOutlet } from '@angular/common';
 
 @Component({

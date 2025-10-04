@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
-import { Message, MessageType, MessageTypeForButtons } from "./dtos/message.dto";
-import { IncrementationService } from "../common/services/incrementation.service";
-import { Button } from "./dtos/button.dto";
+import { Message, MessageType, MessageTypeForButtons } from "../../message-bar/dtos/message.dto";
+import { IncrementationService } from "./incrementation.service";
+import { Button } from "../../message-bar/dtos/button.dto";
 
 @Injectable({
     providedIn: 'root'

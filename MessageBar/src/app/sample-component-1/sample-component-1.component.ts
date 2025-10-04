@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MessageBarService } from '../message-bar/message-bar.service';
+import { MessageBarService } from '../common/services/message-bar.service';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MessageType } from '../message-bar/dtos/message.dto';
 
