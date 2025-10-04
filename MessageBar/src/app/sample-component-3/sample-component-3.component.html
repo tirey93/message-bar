@@ -1,0 +1,26 @@
+<div class="frame">
+    <div>
+        Component Send Message With Buttons
+    </div>
+    <form class="component-form" [formGroup]="form">
+        <button (click)="loremIpsum()" class="btn-primary">Lorem Ipsum</button>
+        <input formControlName="content" type="text" class="form-input" placeholder="Enter text...">
+        <fieldset>
+            <legend>Select buttons position:</legend>
+            <div>
+                <input type="radio" id="bottom" value="bottom" formControlName="buttonsPosition" />
+                <label for="bottom">Bottom</label>
+            </div>
+            <div>
+                <input type="radio" id="right" value="right" formControlName="buttonsPosition" />
+                <label for="right" >Right</label>
+            </div>
+        </fieldset>
+        <input formControlName="buttonPrimaryText" type="text" class="form-input" placeholder="Enter button primary text...">
+        <input formControlName="buttonSecondaryText" type="text" class="form-input" placeholder="Enter button secondary text...">
+        <div class="component-buttons">
+            <button [disabled]="form.invalid" (click)="send()" class="btn-primary">Send</button>
+            <button (click)="cleanAll()" class="btn-secondary">Clean all</button>
+        </div>
+    </form>
+</div>

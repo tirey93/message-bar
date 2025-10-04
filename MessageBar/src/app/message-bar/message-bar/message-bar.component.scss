@@ -1,0 +1,58 @@
+.message-bar {
+  width: 90vw;
+  padding: 0 10px;
+  
+  background: #F0F7FE;
+  color: #0471F0;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid;
+  border-left: 10px solid #0471F0;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+
+  &.error {
+    background: #FEE2E2;
+    color: #DB2525;
+    border-left: 10px solid #DB2525;
+  }
+  &.success {
+    background: #F2FEEF;
+    color: #41BD56;
+    border-left: 10px solid #41BD56;
+  }
+  &.warning {
+    background: #FFF7E6 ;
+    color: #FFB31D ;
+    border-left: 10px solid #FFB31D ;
+  }
+}
+
+.content-message {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.icon-close {
+  background-image: url('../../../../assets/icons/close-x-svgrepo-com.svg');
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+
+.buttons > * {
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.buttons-right {
+  display: flex;
+}

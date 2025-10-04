@@ -1,0 +1,43 @@
+<div class="frame">
+    <div>
+        Component Send Message
+    </div>
+    <form class="component-form" [formGroup]="form">
+        <button (click)="loremIpsum()" class="btn-primary">Lorem Ipsum</button>
+        <input formControlName="content" type="text" class="form-input" placeholder="Enter text...">
+        <fieldset>
+            <legend>Select message type:</legend>
+            <div>
+                <input type="radio" id="information" value="information" formControlName="type" />
+                <label for="information">Information</label>
+            </div>
+            <div>
+                <input type="radio" id="success" value="success" formControlName="type" />
+                <label for="success" >Success</label>
+            </div>
+            <div>
+                <input type="radio" id='warning' value="warning" formControlName="type" />
+                <label for="warning">Warning</label>
+            </div>
+            <div>
+                <input type="radio" id="error" value="error" formControlName="type" />
+                <label for="error">Error</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Select closing option:</legend>
+            <div>
+                <input type="radio" id="yes" value="yes" formControlName="withClosing" />
+                <label for="yes">With</label>
+            </div>
+            <div>
+                <input type="radio" id="no" value="no" formControlName="withClosing" />
+                <label for="no" >Without</label>
+            </div>
+        </fieldset>
+        <div class="component-buttons">
+            <button [disabled]="form.invalid" (click)="send()" class="btn-primary">Send</button>
+            <button (click)="cleanAll()" class="btn-secondary">Clean all</button>
+        </div>
+    </form>
+</div>

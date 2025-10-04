@@ -1,0 +1,13 @@
+<div class="frame">
+    <div>
+        Component Send Simple Message
+    </div>
+    <form class="component-form" [formGroup]="form">
+        <button (click)="loremIpsum()" class="btn-primary">Lorem Ipsum</button>
+        <input formControlName="content" type="text" class="form-input" placeholder="Enter text...">
+    </form>
+    <div class="component-buttons">
+        <button [disabled]="form.invalid" (click)="send()" class="btn-primary">Send</button>
+        <button (click)="cleanAll()" class="btn-secondary">Clean all</button>
+    </div>
+</div>

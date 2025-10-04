@@ -1,0 +1,5 @@
+<div class="message-container">
+    @for (message of messageList; track $index) {
+        <app-message-bar [message]="message"></app-message-bar>
+    }
+</div>

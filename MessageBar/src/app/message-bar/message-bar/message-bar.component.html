@@ -1,0 +1,40 @@
+@if (message) {
+    <div class="message-bar" [class]="message.type">
+        <div class="content-message">
+            <div>{{message.content}}</div>
+            <div class="buttons-right">
+                @if (message.buttonSet?.buttonType === 'right') {
+                    <ng-container 
+                        *ngTemplateOutlet="buttons; context: { $implicit: message }">
+                    </ng-container>
+                }
+                @if (message.withCloseIcon) {
+                    <button (click)="remove(message)" class="icon-button">
+                        <div class="icon-close"></div>
+                    </button>
+                }
+            </div>
+        </div>
+
+        @if (message.buttonSet?.buttonType === 'bottom') {
+            <ng-container 
+                *ngTemplateOutlet="buttons; context: { $implicit: message }">
+            </ng-container>
+        }
+    </div>
+}
+
+<ng-template #buttons let-message>
+    <div class="buttons">
+        <button 
+            class="btn-primary"
+            (click)="message.buttonSet?.buttonPrimary?.action()">
+            {{message.buttonSet?.buttonPrimary?.displayName}}
+        </button>
+        <button 
+            class="btn-secondary"
+            (click)="message.buttonSet?.buttonSecondary?.action()">
+            {{message.buttonSet?.buttonSecondary?.displayName}}
+        </button>
+    </div>
+</ng-template>
